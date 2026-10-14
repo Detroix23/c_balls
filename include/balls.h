@@ -9,20 +9,15 @@
 
 /** # `Ball` entity. */
 struct Ball {
-	float radius;
+	double radius;
+	double mass;
 	Color color;
 	struct Vector2 position;
 	struct Vector2 velocity;
 	struct Vector2 acceleration; 
 };
 
-/** Move the `ball` using the `velocity` field. */
-void ball_apply_velocity(struct Ball *ball);
-
 /** Draw `ball` to the screen. */
 void ball_draw(struct Ball *ball);
-
-/** Check and apply collision. */
-void ball_collision(struct Ball *ball);
 
 #endif
